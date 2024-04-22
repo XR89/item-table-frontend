@@ -13,10 +13,9 @@ export const fetchItems = async () => {
 };
 
 export const updateItem = async (id: string, item: any) => {
-  console.log(item);
   try {
     const response = await axios.put(`${apiUrl}/${id}`, item);
-    console.log(response.data);
+
     return response.data;
   } catch (error) {
     console.error("Failed to update item:", error);

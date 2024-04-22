@@ -129,7 +129,6 @@ export const ItemsTable: React.FC = () => {
   };
 
   const handleUpdateItem = async (id: string, updatedProps: Item) => {
-    console.log(updatedProps);
     try {
       const updatedItem = await updateItem(id, updatedProps);
       setData((prev) => {
@@ -154,7 +153,6 @@ export const ItemsTable: React.FC = () => {
   );
 
   const updateItemData = (rowIndex: number, columnId: string, value: any) => {
-    console.log(value);
     setData((prev) => {
       return prev.map((row, index) => {
         if (index === rowIndex) {
